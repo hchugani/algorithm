@@ -32,7 +32,7 @@ class LinkedList:
     def reverse_k_groups(self, head: Node, k: int)-> Node:
         """
         time complexity: O(n)
-        space complexity : O
+        space complexity : O(n/k) stack calls
         :param head:
         :param k:
         :return:
