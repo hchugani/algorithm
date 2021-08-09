@@ -26,6 +26,10 @@ In the animation below, you will observe a negative number -5 disrupting a combo
 
 """
 class MaxProductSubarray:
+    """
+    Time complexity : O(n)
+    space : O(1)
+    """
     def maxProduct(self, nums: []) -> int:
         lengi = len(nums)
         if lengi==0:
