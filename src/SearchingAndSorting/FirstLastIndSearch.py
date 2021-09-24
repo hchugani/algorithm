@@ -32,6 +32,12 @@ class Solution:
         return lo
 
     def searchRange(self, nums, target):
+        """
+        Time complexity : O(log N)
+        :param nums:
+        :param target:
+        :return:
+        """
         # search for extrme left
         left_ind = self.getExtremeInd(nums, target, True)
 
