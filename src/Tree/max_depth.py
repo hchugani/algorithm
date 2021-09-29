@@ -8,6 +8,10 @@ class TreeNode:
         self.right = right
 
 class Solution:
+    """
+    Depth and height of a tree are equal
+    for node , it is different
+    """
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         # Time complexity : we visit each node exactly once, thus the time complexity is \mathcal{O}(N)O(N),
         #  where NN is the number of nodes.
