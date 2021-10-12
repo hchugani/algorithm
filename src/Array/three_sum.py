@@ -8,7 +8,7 @@ class Solution:
         """
 
         O(n2) time complexity
-        O(n or logn) depending on the sorting algorithm 
+        O(n or logn) depending on the sorting algorithm
         :param nums:
         :return:
         """
