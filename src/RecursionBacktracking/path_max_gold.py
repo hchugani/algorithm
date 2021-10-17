@@ -26,7 +26,11 @@ Path to get the maximum gold, 9 -> 8 -> 7.
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         """
-        O(2^MN) space and time
+        I think the time complexity should be O(MN * 3^MN). For the DFS, it would run at most O(3^MN),
+        because at each recursion, we have 4 possible options and since we can't go back to where we come
+        from. It's down to 3 choices. The deepest level we could go is MN. So the time complexity overall
+        is O(MN * 3^MN).
+        Space: O(MN)
         """
         M = len(grid)
         N = len(grid[0])
