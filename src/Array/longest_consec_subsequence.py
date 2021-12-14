@@ -28,7 +28,7 @@ class Solution:
         explored = set(nums)
 
         longest = 0
-        for num in nums:
+        for num in explored:
             if num-1 not in explored:
                 cur = num
                 cur_streak = 1
