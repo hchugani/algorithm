@@ -20,12 +20,8 @@ class Codec:
         """
         while(self.key in self.map.keys()):
             self.key = self.getRand()
-
         self.map[self.key] = longUrl
         return "tinyurl.com/"+self.key
-
-
-
 
     def decode(self, shortUrl: str) -> str:
         """Decodes a shortened URL to its original URL.
