@@ -2,13 +2,6 @@
 722. Remove Comments
 Medium
 
-526
-
-1413
-
-Add to List
-
-Share
 Given a C++ program, remove comments from it. The program source is an array of strings source where source[i] is the
 ith line of the source code. This represents the result of splitting the original source code string by the newline
 character '\n'.

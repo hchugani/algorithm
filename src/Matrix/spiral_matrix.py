@@ -3,6 +3,7 @@
 """
 from typing import List
 
+
 class Solution:
     def spiralOrder1(self, matrix: List[List[int]]) -> List[int]:
         result = []
