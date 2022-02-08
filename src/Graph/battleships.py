@@ -11,7 +11,7 @@ class Solution:
 
             dirs = []
             if dir==1:
-                # horizontal
+                # vertical
                 dirs.append((1,0))
             elif dir==-1:
                 dirs.append((0,1))

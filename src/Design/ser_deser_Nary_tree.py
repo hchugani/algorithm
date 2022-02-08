@@ -12,8 +12,11 @@ from collections import deque
 class Codec:
     def serialize(self, root: 'Node') -> str:
         """Encodes a tree to a single string.
-        Serialization: O(N)O(N) where NN are the number of nodes in the tree. For every node, we add 2 different values to the final string and every node is processed exactly once. We add the value of the node itself and we also add the child switch sentinel. Also, for the nodes that end a particular level, we add the level end sentinel.
-Deserialization: For deserialization, we process the entire string, one character at a time and also construct the tree along the way. So, the overall time complexity for deserialization is 2N2N = O(N)O(N)
+        Serialization: O(N)O(N) where NN are the number of nodes in the tree. For every node, we add 2 different values
+         to the final string and every node is processed exactly once. We add the value of the node itself and we also
+         add the child switch sentinel. Also, for the nodes that end a particular level, we add the level end sentinel.
+Deserialization: For deserialization, we process the entire string, one character at a time and also construct the tree
+along the way. So, the overall time complexity for deserialization is 2N2N = O(N)O(N)
 Space Complexity
 
 Serialization: The space occupied by the serialization helper function is through the queue and the final string that is produced. We know the size of the final string to be 2N2N. So that is one part of the space complexity. The other part is the one occupied by the queue which is O(N)O(N). Overall, the space is O(N)O(N).

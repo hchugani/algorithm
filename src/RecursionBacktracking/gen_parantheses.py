@@ -18,41 +18,51 @@ class Solution:
         Back tracking
         Time complexity and space  = O(2^2n)
         """
-        ans = []
-
-        def generate(A = [], ind=[0]):
+        def generate(A = []):
             if len(A) == 2*n:
-                if ind[0]==0:
+                if valid(A):
                     ans.append("".join(A))
             else:
                 A.append('(')
-                ind[0] +=1
-                generate(A, ind)
+                generate(A)
                 A.pop()
-                ind[0] -=1
-                ind[0] -=1
-                if ind[0]<0:
-                    ind[0] +=1
-                    return
                 A.append(')')
-                generate(A, ind)
+                generate(A)
                 A.pop()
-                ind[0] +=1
 
-        """
-        def valid(s: List[str])->bool:
-            # O(n)
+        def valid(A):
             bal = 0
-            for c in s:
-                bal += 1 if c=="(" else -1
-                if bal < 0 :
-                    return False
+            for c in A:
+                if c == '(': bal += 1
+                else: bal -= 1
+                if bal < 0: return False
+            return bal == 0
 
-            return True if bal==0 else False
-
-        """
+        ans = []
         generate()
+        return ans
 
+    def generateParenthesis2(self, n: int) -> List[str]:
+        """
+        O(4^n)
+        :param n:
+        :return:
+        """
+        ans = []
+
+        def backtrack(S = [], left = 0, right = 0):
+            if len(S) == 2 * n:
+                ans.append("".join(S))
+                return
+            if left < n:
+                S.append("(")
+                backtrack(S, left+1, right)
+                S.pop()
+            if right < left:
+                S.append(")")
+                backtrack(S, left, right+1)
+                S.pop()
+        backtrack()
         return ans
 
 s = Solution()

@@ -39,7 +39,7 @@ class Solution:
 
 
 s = Solution()
-inputs = [on
+inputs = [
     (["i","love","leetcode","i","love","coding"],2),
     (["i","love","leetcode","i","love","coding"],3)
 ]
