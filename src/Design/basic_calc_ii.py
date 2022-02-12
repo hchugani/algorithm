@@ -55,7 +55,7 @@ class Solution:
                 elif operation == '*':
                     stack.append(stack.pop()*cur_num)
                 elif operation =="/":
-                    stack.append(stack.pop()//cur_num)
+                    stack.append(int(stack.pop()/cur_num))
                 operation = c
                 cur_num = 0
 
